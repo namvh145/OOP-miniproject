@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="gui.MainController">
+    <top>
+        <VBox prefHeight="19.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <MenuBar>
+                    <menus>
+                        <Menu mnemonicParsing="false" text="Menu">
+                            <items>
+                                <MenuItem mnemonicParsing="false" onAction="#input" text="Input"/>
+                                <Menu mnemonicParsing="false" text="Display">
+                                    <items>
+                                        <MenuItem mnemonicParsing="false" onAction="#display_twenty_items"
+                                                  text="20 Items"/>
+                                        <MenuItem mnemonicParsing="false" onAction="#display_fifty_items"
+                                                  text="50 Items"/>
+                                        <MenuItem mnemonicParsing="false" onAction="#display_eighty_items"
+                                                  text="80 Items"/>
+                                    </items>
+                                </Menu>
+                                <MenuItem mnemonicParsing="false" onAction="#clear" text="Clear"/>
+                                <MenuItem mnemonicParsing="false" onAction="#endProgram" text="Exit"/>
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </children>
+        </VBox>
+    </top>
+    <center>
+        <TextArea fx:id="mainTextArea" prefHeight="377.0" prefWidth="600.0" wrapText="true"
+                  BorderPane.alignment="CENTER"/>
+    </center>
+</BorderPane>
